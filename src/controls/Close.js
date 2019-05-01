@@ -7,9 +7,9 @@ const HIT_SLOP = {top: 15, left: 15, right: 15, bottom: 15};
 const styles = StyleSheet.create({
     closeButton: {
         alignSelf: 'flex-end',
-        height: 24,
-        width: 24,
-        borderRadius: 12,
+        height: 30,
+        width: 30,
+        borderRadius: 15,
         backgroundColor: 'rgba(0,0,0,0.2)',
         alignItems: 'center',
         justifyContent: 'center',
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         fontSize: 25,
         lineHeight: 25,
+        fontWeight: 'bold',
         color: '#FFF',
         textAlign: 'center',
     },

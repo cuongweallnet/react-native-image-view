@@ -789,17 +789,12 @@ export default class ImageView extends Component<PropsType, StateType> {
                         styles.underlay,
                     ]}
                 />
-                <Animated.View
-                    style={[
-                        styles.header,
-                        {
-                            transform: headerTranslate,
-                        },
-                    ]}
+                <View
+                    style={styles.header}
                 >
                     {!!close &&
                         React.createElement(close, {onPress: this.close})}
-                </Animated.View>
+                </View>
                 <FlatList
                     horizontal
                     pagingEnabled
