@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 const HIT_SLOP = {top: 15, left: 15, right: 15, bottom: 15};
 
 const styles = StyleSheet.create({
     closeButton: {
-        alignSelf: 'flex-end',
+        alignSelf: 'flex-start',
         height: 50,
         width: 50,
         borderRadius: 25,
@@ -14,16 +14,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 40,
-        marginRight: 15,
+        marginLeft: 15,
     },
-    closeButton__text: {
-        backgroundColor: 'transparent',
-        fontSize: 50,
-        lineHeight: 50,
-        fontWeight: 'bold',
-        color: '#FFF',
-        textAlign: 'center',
-    },
+    image: {
+        width: 30,
+        height: 30
+    }
 });
 
 export default ({onPress}: {onPress: () => *}) => (
@@ -32,6 +28,9 @@ export default ({onPress}: {onPress: () => *}) => (
         style={styles.closeButton}
         onPress={onPress}
     >
-        <Text style={styles.closeButton__text}>×</Text>
+        <Image
+          style={styles.image}
+          source={require('./close.png')}
+        />
     </TouchableOpacity>
 );
